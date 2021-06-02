@@ -3,9 +3,11 @@ pipeline {
         label 'master'
     }
    stages {
-       stage ('checkout'){
-       checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/fabric8-analytics/cli-tools']]])
-       }
+        stage ('checkout'){
+            steps {
+                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/fabric8-analytics/cli-tools']]])
+                }
+        }
         stage ('test-go') {
             steps {
                 echo pwd()
