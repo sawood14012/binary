@@ -13,6 +13,7 @@ pipeline {
                 echo pwd()
                 sh 'which go'
                 sh 'go version'
+                sh 'ls -l'
                 echo "running crda analysis"
                 crdaAnalysis cliVersion: '', crdaKeyId: '3f33291d-1dd1-4163-9b7e-c8038f3a9a29', file: '/var/lib/jenkins/jobs/plugin-pipeine-test/workspace/go.mod'
                 echo "finished"
