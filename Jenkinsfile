@@ -15,7 +15,7 @@ pipeline {
                 sh 'go version'
                 sh 'ls -l'
                 echo "running crda analysis"
-                crdaAnalysis cliVersion: '', crdaKeyId: '3f33291d-1dd1-4163-9b7e-c8038f3a9a29', file: '/var/lib/jenkins/jobs/plugin-pipeine-test/workspace/go.mod'
+                crdaAnalysis cliVersion: '', crdaKeyId: '3f33291d-1dd1-4163-9b7e-c8038f3a9a29', file: '/var/lib/jenkins/jobs/plugin-pipeine-test/branches/main/workspace/go.mod'
                 echo "finished"
             }
         }
@@ -25,7 +25,7 @@ pipeline {
                 sh 'which mvn'
                 sh 'mvn --version'
                 echo "running crda analysis"
-                crdaAnalysis cliVersion: '', crdaKeyId: '3f33291d-1dd1-4163-9b7e-c8038f3a9a29', file: '/var/lib/jenkins/jobs/plugin-pipeine-test/workspace/acceptance-tests/manifests/pom.xml'
+                crdaAnalysis cliVersion: '', crdaKeyId: '3f33291d-1dd1-4163-9b7e-c8038f3a9a29', file: '/var/lib/jenkins/jobs/plugin-pipeine-test/branches/main/workspace/acceptance-tests/manifests/pom.xml'
                 echo "finished"
             }
         }
@@ -36,7 +36,7 @@ pipeline {
                 sh 'python -V'
                 sh 'cd /var/lib/jenkins/jobs/plugin-pipeine-test/workspace/acceptance-tests/manifests && pip3 install --user -r requirements.txt'
                 echo "running crda analysis"
-                crdaAnalysis cliVersion: '', crdaKeyId: '3f33291d-1dd1-4163-9b7e-c8038f3a9a29', file: '/var/lib/jenkins/jobs/plugin-pipeine-test/workspace/acceptance-tests/manifests/requirements.txt'
+                crdaAnalysis cliVersion: '', crdaKeyId: '3f33291d-1dd1-4163-9b7e-c8038f3a9a29', file: '/var/lib/jenkins/jobs/plugin-pipeine-test/branches/main/workspace/acceptance-tests/manifests/requirements.txt'
                 echo "finished"
             }
         }
@@ -48,7 +48,7 @@ pipeline {
                 sh 'node --version'
                 sh 'cd /var/lib/jenkins/jobs/plugin-pipeine-test/workspace/acceptance-tests/manifests && npm install'
                 echo "running crda analysis"
-                crdaAnalysis cliVersion: '', crdaKeyId: '3f33291d-1dd1-4163-9b7e-c8038f3a9a29', file: '/var/lib/jenkins/jobs/plugin-pipeine-test/workspace/acceptance-tests/manifests/package.json'
+                crdaAnalysis cliVersion: '', crdaKeyId: '3f33291d-1dd1-4163-9b7e-c8038f3a9a29', file: '/var/lib/jenkins/jobs/plugin-pipeine-test/branches/main/workspace/acceptance-tests/manifests/package.json'
                 echo "finished"
                 }
             }
